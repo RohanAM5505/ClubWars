@@ -2,9 +2,14 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import RegistrationPage from './Pages/registrations.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showRegistration, setShowRegistration] = useState(true)
+
+  if (showRegistration) {
+    return <RegistrationPage />
+  }
 
   return (
     <>
@@ -18,8 +23,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button onClick={() => setShowRegistration(true)}>
+          Go to Registration Page
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
