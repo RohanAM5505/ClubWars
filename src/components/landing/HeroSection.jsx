@@ -46,51 +46,13 @@ export default function HeroSection() {
         </div>
 
         <div className="hero-image">
-<img
-  src={shipImage}
-  alt="cargo ship"
-  className="hero-ship"
-/>
-
+          <img
+            src={shipImage}
+            alt="cargo ship"
+            className="hero-ship"
+          />
         </div>
-      </div>
-
-      {/* QUOTE BOX */}
-      <div className="hero-box">
-        <div className="box-item">
-          <label>From</label>
-          <input placeholder="Mumbai" />
-        </div>
-
-        <div className="box-item">
-          <label>To</label>
-          <input placeholder="Dubai" />
-        </div>
-
-        <div className="box-item">
-          <label>Cargo Type</label>
-          <select>
-            <option>General Goods</option>
-            <option>Fragile Items</option>
-            <option>Perishable / Cold Chain</option>
-            <option>Heavy Machinery</option>
-            <option>Documents / Light Cargo</option>
-          </select>
-        </div>
-
-        <div className="box-item">
-          <label>Weight</label>
-          <input placeholder="12 kg" />
-        </div>
-
-        <button
-          className="quote-btn"
-          onClick={() => alert("Quote generated successfully 💰")}
-        >
-          Get Quote
-        </button>
       </div>
     </section>
   )
 }
-

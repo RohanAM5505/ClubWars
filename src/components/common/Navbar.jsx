@@ -19,16 +19,10 @@ export default function Navbar() {
         <button onClick={() => scrollToSection("why")}>Why Rapidrun</button>
         <button onClick={() => scrollToSection("platform")}>Platform</button>
         <button onClick={() => scrollToSection("resources")}>Resources</button>
-
-        {/* Placeholder page */}
         <button onClick={() => scrollToSection("subscription")}>
           Subscription
         </button>
       </div>
-
-      {/* CTA */}
-      <button className="nav-btn">Get Started</button>
     </nav>
   )
 }
-
