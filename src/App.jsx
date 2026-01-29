@@ -1,38 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import RegistrationPage from './Pages/registrations.jsx'
+import { useState } from "react"
+import "./App.css"
+
+// Pages
+import RegistrationPage from "./Pages/registrations.jsx"
+
+// Landing sections
+import HeroSection from "./components/landing/HeroSection"
+import WhyRapidrunSection from "./components/landing/WhyRapidrunSection"
+import KeyFeaturesSection from "./components/landing/KeyFeaturesSection"
+import ProviderDashboardSection from "./components/landing/ProviderDashboardSection"
+import NewsletterSection from "./components/landing/NewsletterSection"
+import FooterSection from "./components/landing/FooterSection"
 
 function App() {
-  const [showRegistration, setShowRegistration] = useState(true)
+  const [showRegistration, setShowRegistration] = useState(false)
 
+  // Show registration page
   if (showRegistration) {
     return <RegistrationPage />
   }
 
+  // Default: Landing page
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setShowRegistration(true)}>
-          Go to Registration Page
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <HeroSection onRegister={() => setShowRegistration(true)} />
+      <WhyRapidrunSection />
+      <KeyFeaturesSection />
+      <ProviderDashboardSection />
+      <NewsletterSection />
+      <FooterSection />
     </>
   )
 }
